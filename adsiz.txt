@@ -1,0 +1,13 @@
+istemci kimlik
+
+9qm78ysatgv5erf6tei65f3fhuc5zy
+
+istemci parola
+
+ldsh7mttya6q771nlvedhsf3285n0s
+
+array:3 [▼
+  "access_token" => "kf54zjh6ufvxky4826b4p0carbxs29"
+  "expires_in" => 4843889
+  "token_type" => "bearer"
+]
