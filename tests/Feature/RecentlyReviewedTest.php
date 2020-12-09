@@ -30,7 +30,6 @@ class RecentlyReviewedTest extends TestCase {
             ->assertSee('PS5')
             ->assertSee('Series X')
             ->assertSee('Stadia')
-            ->assertSee('64')
             ->assertSee('In Watch Dogs: Legion, near future London is facing its downfall...unless you do something about it. Build a resistance, fight back, and give the city back to the people. It’s time to rise up.');
     }
 

@@ -2,9 +2,9 @@
 
 @section('content')
     <div class="container mx-auto px-4">
-        <div class="flex justify-center items-center" style="height: 600px">
+        <div class="flex justify-center items-center" style="height: 750px">
             <div>
-                {{ \Illuminate\Support\Str::title(str_replace('-', ' ', \Illuminate\Support\Facades\Request::segment(1))) }} was not found in the database!
+                {{ Str::title(str_replace('-', ' ', Request::segment(!Request::segment(2) ? 1 : 2))) }} was not found in the database!
             </div>
         </div>
     </div>

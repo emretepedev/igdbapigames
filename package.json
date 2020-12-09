@@ -19,6 +19,7 @@
         "vue-template-compiler": "^2.6.12"
     },
     "dependencies": {
+        "alpinejs": "^2.7.3",
         "autoprefixer": "^10.0.4",
         "postcss": "^7.0.35",
         "progressbar.js": "^1.1.0",

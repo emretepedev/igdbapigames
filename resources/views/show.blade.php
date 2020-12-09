@@ -120,24 +120,56 @@
                 <p class="mt-12">
                     {{ $game['summary'] }}
                 </p>
-                <div class="mt-12">
-                    <a class="inline-flex bg-blue-500 text-white font-semibold px-4 py-4 hover:bg-blue-600 rounded transition ease-in-out duration-150 justify-center items-center" target="_blank" href="https://www.youtube.com/watch?v={{ $game['videos'][0]['video_id'] }}">
+                <div class="mt-12" x-data="{ isTrailerModalVisible: false }">
+                    <button class="flex bg-blue-500 text-white font-semibold px-4 py-4 hover:bg-blue-600 rounded transition ease-in-out duration-150" @click="isTrailerModalVisible = true">
                         <i class="fas fa-play"></i>
                         <span class="ml-2">Play Trailer</span>
-                    </a>
+                    </button>
+                    <template x-if="isTrailerModalVisible">
+                        <div x-show="isTrailerModalVisible" style="background-color: rgba(0, 0, 0, .5);" class="fixed top-0 left-0 w-full h-full flex items-center shadow-lg overflow-y-auto">
+                            <div class="container mx-auto lg:px-32 rounded-lg overflow-y-auto">
+                                <div class="bg-gray-900 rounded">
+                                    <div class="flex justify-end pr-4 pt-2">
+                                        <button class="text-3xl leading-none hover:text-gray-300" @click="isTrailerModalVisible = false" @keydown.escape.window="isTrailerModalVisible = false">&times;</button>
+                                    </div>
+                                    <div class="modal-body px-8 py-8">
+                                        <div class="responsive-container overflow-hidden relative" style="padding-top: 56.25%">
+                                            <iframe width="560" height="315" src="https://www.youtube.com/embed/{{ $game['videos'][0]['video_id'] }}" class="responsive-iframe absolute top-0 left-0 w-full h-full" allow="autoplay; encrypted-media;" allowfullscreen style="border: 0;"></iframe>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </template>
                 </div>
             </div>
         </div> {{--end game details--}}
 
-        <div class="images-container border-b border-gray-800 pb-12 mt-8">
+        <div class="images-container border-b border-gray-800 pb-12 mt-8" x-data="{ isImageModalVisible: false, image: '' }">
             <h2 class="text-blue-500 uppercase tracking-wide font-semibold">Images</h2>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 mt-8">
                 @foreach($game['screenshots'] as $screenshot)
                     <div>
-                        <a target="_blank" href="{{ Str::replaceFirst('thumb', 'screenshot_huge', $screenshot['url']) }}"><img class="hover:opacity-75 transition ease-in-out duration-150" src="{{ Str::replaceFirst('thumb', 'screenshot_big', $screenshot['url']) }}" alt="{{ $game['name'] }}" title="{{ $game['name'].' '.++$loop->index }}"></a>
+                        <a href="#" @click.prevent="isImageModalVisible = true,image='{{ Str::replaceFirst('thumb', 'screenshot_huge', $screenshot['url']) }}'">
+                            <img class="hover:opacity-75 transition ease-in-out duration-150" src="{{ Str::replaceFirst('thumb', 'screenshot_big', $screenshot['url']) }}" alt="{{ $game['name'] }}" title="{{ $game['name'].' '.++$loop->index }}">
+                        </a>
                     </div>
                 @endforeach
             </div>
+            <template x-if="isImageModalVisible">
+                <div x-show="isImageModalVisible" style="background-color: rgba(0, 0, 0, .5);" class="fixed top-0 left-0 w-full h-full flex items-center shadow-lg overflow-y-auto">
+                    <div class="container mx-auto lg:px-32 rounded-lg overflow-y-auto">
+                        <div class="bg-gray-900 rounded">
+                            <div class="flex justify-end pr-4 pt-2">
+                                <button class="text-3xl leading-none hover:text-gray-300" @click="isImageModalVisible = false" @keydown.escape.window="isImageModalVisible = false">&times;</button>
+                            </div>
+                            <div class="modal-body px-8 py-8">
+                                <img :src="image">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </template>
         </div> {{--end images container--}}
         <div class="similar-games-container mt-8">
             <h2 class="text-blue-500 uppercase tracking-wide font-semibold">Similar Games</h2>

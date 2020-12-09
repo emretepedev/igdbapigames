@@ -4,7 +4,21 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="182ab029-b054-4df0-a724-d1e7cc85e2d5" name="Default Changelist" comment="" />
+    <list default="true" id="182ab029-b054-4df0-a724-d1e7cc85e2d5" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/mix-manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/public/mix-manifest.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/errors/404.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/errors/404.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/livewire/search-dropdown.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/livewire/search-dropdown.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/show.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/show.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tailwind.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/tailwind.config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/Feature/RecentlyReviewedTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Feature/RecentlyReviewedTest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/Feature/SearchDropdown.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -13,6 +27,9 @@
   <component name="ComposerSettings" doNotAsk="true" synchronizationState="SYNCHRONIZE">
     <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
     <execution />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="PhpWorkspaceProjectConfiguration">
     <include_path>
@@ -183,6 +200,8 @@
       <workItem from="1607283230893" duration="1298000" />
       <workItem from="1607392574128" duration="23850000" />
       <workItem from="1607418127768" duration="108000" />
+      <workItem from="1607418443053" duration="7101000" />
+      <workItem from="1607486466960" duration="5060000" />
     </task>
     <servers />
   </component>
@@ -198,10 +217,10 @@
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="720" y="139" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1607394788438" />
-    <state x="690" y="294" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1607414893041">
+    <state x="690" y="294" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1607420836645">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="690" y="294" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1607414893041" />
+    <state x="690" y="294" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1607420836645" />
     <state x="461" y="184" key="SettingsEditor" timestamp="1606174751558">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
@@ -210,9 +229,9 @@
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="616" y="250" key="run.anything.popup/0.0.1920.1080@0.0.1920.1080" timestamp="1607396051404" />
-    <state x="623" y="235" width="672" height="160" key="search.everywhere.popup" timestamp="1607416417029">
+    <state x="623" y="235" width="672" height="160" key="search.everywhere.popup" timestamp="1607490515502">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="623" y="235" width="672" height="160" key="search.everywhere.popup/0.0.1920.1080@0.0.1920.1080" timestamp="1607416417029" />
+    <state x="623" y="235" width="672" height="160" key="search.everywhere.popup/0.0.1920.1080@0.0.1920.1080" timestamp="1607490515502" />
   </component>
 </project>
