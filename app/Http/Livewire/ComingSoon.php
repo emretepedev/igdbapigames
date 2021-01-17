@@ -15,8 +15,8 @@ class ComingSoon extends Component
         $current = Carbon::now()->timestamp;
 
         $this->comingSoon = Http::withHeaders([
-            'Client-ID' => '9qm78ysatgv5erf6tei65f3fhuc5zy',
-            'Authorization' => 'Bearer kf54zjh6ufvxky4826b4p0carbxs29',
+            'Client-ID' => env('IGDB_CLIENT_ID'),
+            'Authorization' => env('IGDB_CLIENT_SECRET'),
         ])
             ->withBody(
                 'fields
@@ -26,14 +26,14 @@ class ComingSoon extends Component
                 first_release_date,
                 hypes,
                 rating;
-                
+
                 where
                 hypes != null &
                 first_release_date >= '.$current.' &
                 hypes > 80;
-                
+
                 sort first_release_date asc;
-                
+
                 limit 4;','text/plain')
             ->post('https://api.igdb.com/v4/games')
             ->json();

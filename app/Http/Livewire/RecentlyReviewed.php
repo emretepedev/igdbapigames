@@ -17,8 +17,8 @@ class RecentlyReviewed extends Component
         $beforeTwoMonths = Carbon::now()->subMonth(2)->timestamp;
 
         $this->recentlyReviewed = Http::withHeaders([
-            'Client-ID' => '9qm78ysatgv5erf6tei65f3fhuc5zy',
-            'Authorization' => 'Bearer kf54zjh6ufvxky4826b4p0carbxs29',
+            'Client-ID' => env('IGDB_CLIENT_ID'),
+            'Authorization' => env('IGDB_CLIENT_SECRET'),
         ])
             ->withBody(
                 'fields
@@ -31,7 +31,7 @@ class RecentlyReviewed extends Component
                 rating,
                 rating_count,
                 summary;
-                
+
                 where
                 hypes != null &
                 rating != null &
@@ -41,9 +41,9 @@ class RecentlyReviewed extends Component
                 first_release_date < '.$current.' &
                 rating_count > 5
                 );
-                
+
                 sort hypes desc;
-                
+
                 limit 3;','text/plain')
             ->post('https://api.igdb.com/v4/games')
             ->json();

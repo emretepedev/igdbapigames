@@ -14,8 +14,8 @@ class SearchDropdown extends Component
     {
         if(strlen($this->search) >= 2){
             $this->searchResults = Http::withHeaders([
-                'Client-ID' => '9qm78ysatgv5erf6tei65f3fhuc5zy',
-                'Authorization' => 'Bearer kf54zjh6ufvxky4826b4p0carbxs29',
+                'Client-ID' => env('IGDB_CLIENT_ID'),
+                'Authorization' => env('IGDB_CLIENT_SECRET'),
             ])
                 ->withBody(
                     'search "'.$this->search.'";
@@ -23,7 +23,7 @@ class SearchDropdown extends Component
                 name,
                 slug,
                 cover.url;
-                
+
                 limit 6;','text/plain')
                 ->post('https://api.igdb.com/v4/games')
                 ->json();

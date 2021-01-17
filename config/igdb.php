@@ -5,8 +5,8 @@ return [
      * These are the credentials you got from https://dev.twitch.tv/console/apps
      */
     'credentials' => [
-        'client_id' => env('9qm78ysatgv5erf6tei65f3fhuc5zy'),
-        'client_secret' => env('o6qmdwswyvgeog53jazjyszgpbj9zh'),
+        'client_id' => env('IGDB_CLIENT_ID'),
+        'client_secret' => env('IGDB_CLIENT_SECRET'),
     ],
 
     /*

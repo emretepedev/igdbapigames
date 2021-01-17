@@ -20,8 +20,8 @@ class PopularGames extends Component
         $this->popularGames = Cache::remember('popular-games', 7, function () use ($beforeFiveMonths, $afterFiveMonths) {
             sleep(3);
             return Http::withHeaders([
-                'Client-ID' => '9qm78ysatgv5erf6tei65f3fhuc5zy',
-                'Authorization' => 'Bearer kf54zjh6ufvxky4826b4p0carbxs29',
+                'Client-ID' => env('IGDB_CLIENT_ID'),
+                'Authorization' => env('IGDB_CLIENT_SECRET'),
             ])
                 ->withBody(
                     'fields
@@ -32,7 +32,7 @@ class PopularGames extends Component
                 hypes,
                 platforms.abbreviation,
                 rating;
-                
+
                 where
                 hypes != null &
                 platforms = (48,49,130,6) &
@@ -40,9 +40,9 @@ class PopularGames extends Component
                 first_release_date >= '.$beforeFiveMonths.' &
                 first_release_date < '.$afterFiveMonths.'
                 );
-                
+
                 sort hypes desc;
-                
+
                 limit 12;','text/plain')
                 ->post('https://api.igdb.com/v4/games')
                 ->json();
@@ -57,7 +57,7 @@ class PopularGames extends Component
             ]);
         });
     }
-    
+
     public function render()
     {
         return view('livewire.popular-games');
